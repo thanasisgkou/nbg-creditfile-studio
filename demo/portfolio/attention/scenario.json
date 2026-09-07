@@ -1,0 +1,53 @@
+{
+  "slug": "attention",
+  "name": "Attention Is All You Need Α.Ε.",
+  "stage": "review",
+  "basis": "Adapted from existing synthetic dossier: Νέκταρ Τεχνολογίες & Λογισμικό Ι.Κ.Ε.",
+  "application": {
+    "company_legal_name": "Attention Is All You Need Α.Ε.",
+    "tax_id": "998707077",
+    "registration_number": null,
+    "legal_form": "Ανώνυμη Εταιρεία (Α.Ε.)",
+    "business_activity": "Υπολογιστικές υποδομές GPU cloud και φιλοξενία μοντέλων τεχνητής νοημοσύνης για επιχειρήσεις",
+    "establishment_date": "2019-10-05",
+    "requested_amount": 280000.0,
+    "currency": "EUR",
+    "financing_purpose": "Αγορά GPU servers, αποθήκευσης και δικτυακού εξοπλισμού για υπηρεσίες φιλοξενίας μοντέλων AI",
+    "tenor_months": 48,
+    "declared_annual_turnover": 1850000.0,
+    "declared_existing_debt": 320000.0
+  },
+  "financials": {
+    "company_legal_name": "Attention Is All You Need Α.Ε.",
+    "tax_id": "998707077",
+    "reporting_period": "2024-01-01/2024-12-31",
+    "currency": "EUR",
+    "unit_scale": 1,
+    "revenue": 1850000.0,
+    "ebitda": 490000.0,
+    "net_profit_or_loss": 300300.0,
+    "total_assets": 2250000.0,
+    "total_liabilities": 750000.0,
+    "total_equity": 1500000.0,
+    "total_borrowings": 320000.0
+  },
+  "budget": [
+    [
+      "Τέσσερις GPU servers",
+      240000
+    ],
+    [
+      "Σύστημα αποθήκευσης δεδομένων",
+      40000
+    ],
+    [
+      "Δικτυακός εξοπλισμός υψηλής ταχύτητας",
+      40000
+    ],
+    [
+      "UPS και εγκατάσταση σε μισθωμένο data center",
+      30000
+    ]
+  ],
+  "description": "Η εταιρεία διαθέτει υπολογιστική ισχύ με συνδρομή σε επιχειρήσεις που εκτελούν εφαρμογές AI και γλωσσικά μοντέλα. Ο εξοπλισμός εγκαθίσταται σε μισθωμένα racks υπάρχοντος data center. Δεν χρηματοδοτείται κατασκευή νέου κτιρίου."
+}

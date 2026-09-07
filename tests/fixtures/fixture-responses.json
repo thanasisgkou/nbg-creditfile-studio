@@ -1,0 +1,376 @@
+{
+  "mode": "fixture",
+  "notice": "PREAUTHORED FIXTURE FOR UI TESTING. NOT ACTUAL MODEL OUTPUT. Never used for live evaluation.",
+  "responses": [
+    {
+      "document_type": "application",
+      "fields": [
+        {
+          "field_name": "company_legal_name",
+          "raw_value": "Aegean Foods A.E.",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Aegean Foods A.E."
+            }
+          ]
+        },
+        {
+          "field_name": "tax_id",
+          "raw_value": "999999990",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "ΑΦΜ: 999999990 (συνθετικός αριθμός επίδειξης, όχι πραγματική καταχώριση)"
+            }
+          ]
+        },
+        {
+          "field_name": "registration_number",
+          "raw_value": null,
+          "confidence": 0.0,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Αριθμός ΓΕΜΗ: δεν συμπληρώθηκε."
+            }
+          ]
+        },
+        {
+          "field_name": "legal_form",
+          "raw_value": "Ανώνυμη Εταιρεία (Α.Ε.)",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Νομική μορφή: Ανώνυμη Εταιρεία (Α.Ε.)"
+            }
+          ]
+        },
+        {
+          "field_name": "business_activity",
+          "raw_value": "Παραγωγή και διανομή τροφίμων",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Δραστηριότητα: Παραγωγή και διανομή τροφίμων"
+            }
+          ]
+        },
+        {
+          "field_name": "establishment_date",
+          "raw_value": "20/05/2014",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Ημερομηνία ίδρυσης: 20/05/2014"
+            }
+          ]
+        },
+        {
+          "field_name": "requested_amount",
+          "raw_value": "750.?00",
+          "confidence": 0.4,
+          "number_locale": "el",
+          "uncertainty": "Δυσανάγνωστο ψηφίο, απαιτείται επιβεβαίωση.",
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Αιτούμενο ποσό: 750.?00 EUR"
+            }
+          ]
+        },
+        {
+          "field_name": "currency",
+          "raw_value": "EUR",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Νόμισμα αίτησης: EUR. Όλα τα χρηματικά ποσά της αίτησης είναι σε ευρώ."
+            }
+          ]
+        },
+        {
+          "field_name": "financing_purpose",
+          "raw_value": "Αγορά γραμμής συσκευασίας",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Σκοπός χρηματοδότησης: Αγορά γραμμής συσκευασίας"
+            }
+          ]
+        },
+        {
+          "field_name": "tenor_months",
+          "raw_value": "60 μήνες",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 1,
+              "block_id": "5b15ff100872057da8e4_p1_b1",
+              "quote": "Συνολική διάρκεια χρηματοδότησης: 60 μήνες"
+            }
+          ]
+        },
+        {
+          "field_name": "declared_annual_turnover",
+          "raw_value": "4.800.000",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 2,
+              "block_id": "5b15ff100872057da8e4_p2_b1",
+              "quote": "Δηλωμένος ετήσιος κύκλος εργασιών χρήσης 2025: 4.800.000 EUR"
+            }
+          ]
+        },
+        {
+          "field_name": "declared_existing_debt",
+          "raw_value": "1.200.000",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "5b15ff100872057da8e4",
+              "page": 2,
+              "block_id": "5b15ff100872057da8e4_p2_b1",
+              "quote": "Δηλωμένος υφιστάμενος τραπεζικός δανεισμός στις 31/12/2025: 1.200.000 EUR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "document_type": "financials",
+      "fields": [
+        {
+          "field_name": "company_legal_name",
+          "raw_value": "Aegean Foods A.E.",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 1,
+              "block_id": "7082e04953ace1bb99b1_p1_b1",
+              "quote": "Aegean Foods A.E."
+            }
+          ]
+        },
+        {
+          "field_name": "tax_id",
+          "raw_value": "999999990",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 1,
+              "block_id": "7082e04953ace1bb99b1_p1_b1",
+              "quote": "ΑΦΜ: 999999990 (συνθετικός αριθμός επίδειξης)"
+            }
+          ]
+        },
+        {
+          "field_name": "reporting_period",
+          "raw_value": "01/01/2025 - 31/12/2025",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 1,
+              "block_id": "7082e04953ace1bb99b1_p1_b1",
+              "quote": "Περίοδος αναφοράς: 01/01/2025 - 31/12/2025"
+            }
+          ]
+        },
+        {
+          "field_name": "currency",
+          "raw_value": "EUR",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 1,
+              "block_id": "7082e04953ace1bb99b1_p1_b1",
+              "quote": "Ποσά σε χιλιάδες ευρώ (EUR)."
+            }
+          ]
+        },
+        {
+          "field_name": "unit_scale",
+          "raw_value": "χιλιάδες ευρώ",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 1,
+              "block_id": "7082e04953ace1bb99b1_p1_b1",
+              "quote": "Νόμισμα παρουσίασης: EUR. Μονάδα παρουσίασης: χιλιάδες ευρώ."
+            }
+          ]
+        },
+        {
+          "field_name": "revenue",
+          "raw_value": "4.580",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 3,
+              "block_id": "7082e04953ace1bb99b1_p3_b1",
+              "quote": "Κύκλος εργασιών                                                                    9                    4.580                   4.100"
+            }
+          ]
+        },
+        {
+          "field_name": "ebitda",
+          "raw_value": "740",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 3,
+              "block_id": "7082e04953ace1bb99b1_p3_b2",
+              "quote": "EBITDA                                                                                                    740                     650"
+            }
+          ]
+        },
+        {
+          "field_name": "net_profit_or_loss",
+          "raw_value": "360",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 3,
+              "block_id": "7082e04953ace1bb99b1_p3_b3",
+              "quote": "Καθαρό αποτέλεσμα χρήσης μετά από φόρους                                                                  360                     300"
+            }
+          ]
+        },
+        {
+          "field_name": "total_assets",
+          "raw_value": "6.800",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 2,
+              "block_id": "7082e04953ace1bb99b1_p2_b2",
+              "quote": "Σύνολο ενεργητικού                                                                                    6.800                   6.200"
+            }
+          ]
+        },
+        {
+          "field_name": "total_liabilities",
+          "raw_value": "3.250",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 2,
+              "block_id": "7082e04953ace1bb99b1_p2_b2",
+              "quote": "Σύνολο υποχρεώσεων                                                                                    3.250                   3.020"
+            }
+          ]
+        },
+        {
+          "field_name": "total_equity",
+          "raw_value": "3.550",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 2,
+              "block_id": "7082e04953ace1bb99b1_p2_b2",
+              "quote": "Σύνολο ιδίων κεφαλαίων                                                           5                    3.550                   3.180"
+            }
+          ]
+        },
+        {
+          "field_name": "total_borrowings",
+          "raw_value": "1.350",
+          "confidence": 0.95,
+          "number_locale": "el",
+          "uncertainty": null,
+          "evidence": [
+            {
+              "document_id": "7082e04953ace1bb99b1",
+              "page": 5,
+              "block_id": "7082e04953ace1bb99b1_p5_b1",
+              "quote": "Συνολικός τραπεζικός δανεισμός                                                                         1.350                   1.400"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

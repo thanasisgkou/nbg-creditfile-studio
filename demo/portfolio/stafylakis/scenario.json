@@ -1,0 +1,49 @@
+{
+  "slug": "stafylakis",
+  "name": "Σταφυλάκης Οινοποιητική Α.Ε.",
+  "stage": "complete",
+  "basis": "Adapted from existing synthetic dossier: ΙΟΝΙΟΙ ΑΜΠΕΛΩΝΕΣ Α.Ε.",
+  "application": {
+    "company_legal_name": "Σταφυλάκης Οινοποιητική Α.Ε.",
+    "tax_id": "990364871",
+    "registration_number": "123456780101",
+    "legal_form": "Ανώνυμη Εταιρεία",
+    "business_activity": "Οινοποίηση, εμφιάλωση και εμπορία οίνων από ελληνικούς αμπελώνες",
+    "establishment_date": "2009-08-08",
+    "requested_amount": 320000.0,
+    "currency": "EUR",
+    "financing_purpose": "Αγορά νέας γραμμής εμφιάλωσης και κεφάλαιο κίνησης για τον τρύγο",
+    "tenor_months": 54,
+    "declared_annual_turnover": 2240000.0,
+    "declared_existing_debt": 1200000
+  },
+  "financials": {
+    "company_legal_name": "Σταφυλάκης Οινοποιητική Α.Ε.",
+    "tax_id": "990364871",
+    "reporting_period": "2025-01-01/2025-12-31",
+    "currency": "EUR",
+    "unit_scale": 1,
+    "revenue": 2240000.0,
+    "ebitda": 370000.0,
+    "net_profit_or_loss": 128000.0,
+    "total_assets": 3175000.0,
+    "total_liabilities": 2025000.0,
+    "total_equity": 1150000.0,
+    "total_borrowings": 1200000.0
+  },
+  "budget": [
+    [
+      "Γραμμή εμφιάλωσης και ετικετοποίησης",
+      260000
+    ],
+    [
+      "Δεξαμενές και έλεγχος θερμοκρασίας",
+      60000
+    ],
+    [
+      "Πρώτες ύλες και συσκευασίες τρύγου",
+      80000
+    ]
+  ],
+  "description": "Οι πωλήσεις αφορούν εμφιαλωμένους οίνους προς χονδρεμπόρους και επιχειρήσεις εστίασης. Η επένδυση μειώνει τον χρόνο εμφιάλωσης και αυξάνει τη δυναμικότητα του οινοποιείου."
+}

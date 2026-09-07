@@ -1,0 +1,49 @@
+{
+  "slug": "ypnos",
+  "name": "Ypnos Palace Ξενοδοχειακή Α.Ε.",
+  "stage": "clarification",
+  "basis": "Adapted from existing synthetic dossier: Αργώ Φιλοξενία & Τουρισμός Α.Ε.",
+  "application": {
+    "company_legal_name": "Ypnos Palace Ξενοδοχειακή Α.Ε.",
+    "tax_id": "998404044",
+    "registration_number": "123456789045",
+    "legal_form": "Ανώνυμη Εταιρεία (Α.Ε.)",
+    "business_activity": "Λειτουργία ξενοδοχείου, τουριστικών καταλυμάτων και υπηρεσιών φιλοξενίας",
+    "establishment_date": "2011-06-18",
+    "requested_amount": 600000.0,
+    "currency": "EUR",
+    "financing_purpose": "Ανακαίνιση τουριστικής μονάδας και αναβάθμιση ενεργειακής κλάσης",
+    "tenor_months": 84,
+    "declared_annual_turnover": 3650000.0,
+    "declared_existing_debt": 1120000.0
+  },
+  "financials": {
+    "company_legal_name": "Ypnos Palace Ξενοδοχειακή Α.Ε.",
+    "tax_id": "998404044",
+    "reporting_period": "2024-01-01/2024-12-31",
+    "currency": "EUR",
+    "unit_scale": 1000,
+    "revenue": 3650000.0,
+    "ebitda": 680000.0,
+    "net_profit_or_loss": 269000.0,
+    "total_assets": 5920000.0,
+    "total_liabilities": 2640000.0,
+    "total_equity": 3280000.0,
+    "total_borrowings": 1420000.0
+  },
+  "budget": [
+    [
+      "Ανακαίνιση δωματίων και κοινόχρηστων χώρων",
+      420000
+    ],
+    [
+      "Ενεργειακή αναβάθμιση και κλιματισμός",
+      230000
+    ],
+    [
+      "Εξοπλισμός υποδοχής και κρατήσεων",
+      100000
+    ]
+  ],
+  "description": "Τα έσοδα προέρχονται από διανυκτερεύσεις, εστίαση και συνεργασίες με τουριστικούς πράκτορες. Η επένδυση αφορά ανακαίνιση της υφιστάμενης ξενοδοχειακής μονάδας και ενεργειακή αναβάθμιση."
+}

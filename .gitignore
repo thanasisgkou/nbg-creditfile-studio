@@ -1,0 +1,22 @@
+.venv/
+.env
+/data/
+/data-*/
+/output/
+__pycache__/
+.pytest_cache/
+*.pyc
+models/
+
+# Local configuration, reports and editor caches
+.env.*
+*.log
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
