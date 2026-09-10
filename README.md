@@ -1,21 +1,54 @@
-# CreditFile Studio
+# NBG | CreditFile Studio
 
-A local workspace for reviewing SME financing applications and financial statements. It combines PDF evidence, field corrections, deterministic comparisons, case-scoped questions and versioned preparation bulletins. The interface is in Greek; all supplied documents contain synthetic data.
+**Evidence-led preparation of SME financing files.**
 
-[Online demo](https://creditfile-studio-review.web.app/) · The hosted application is maintained separately from this local repository.
+CreditFile Studio is a proof-of-concept workspace for credit analysts reviewing an SME financing application together with its financial statements. It extracts a defined set of fields, links values to the source PDFs, highlights cross-document differences, supports analyst review, and produces versioned preparation outputs.
 
-## Run locally
+The product is designed to **support preparation and review**. It does not make lending, scoring, KYC/AML, approval or rejection decisions.
 
-Requirements: Python 3.11+, Node.js 20.19+ or 22.12+, and Arial on Windows or DejaVu Sans on Linux for Greek PDF output. Internet access is needed once to install dependencies.
+## Hosted demo
 
-On Windows, open PowerShell in the repository:
+**Live product:** https://creditfile-studio-review.web.app/
+
+The hosted demo contains the latest UI and case-assistant iteration used in the final assessment demonstration. This repository is the **local reference implementation** and is intentionally described separately from the hosted release rather than implying that both are the same build.
+
+All bundled demo documents and companies are synthetic.
+
+## Core workflow
+
+1. Create or reopen a financing case.
+2. Review one financing application and one financial-statements PDF.
+3. Extract 24 defined fields with source evidence.
+4. Open the exact PDF page or passage behind a proposed value.
+5. Run deterministic cross-document checks for identity, amounts and accounting consistency.
+6. Confirm, correct or leave values unresolved while preserving the original extraction and review history.
+7. Ask case-scoped questions or use explicit preset actions.
+8. Issue a versioned preparation bulletin.
+9. Download an editable clarification draft when company input is required.
+
+A key product principle is:
+
+> **The model proposes. The product checks. The analyst decides.**
+
+## Local reference edition
+
+Requirements:
+
+- Python 3.11+
+- Node.js 20.19+ or 22.12+
+- Arial on Windows or DejaVu Sans on Linux for Greek PDF output
+- Internet access once for dependency installation
+
+### Windows
+
+Open PowerShell in the repository:
 
 ```powershell
 .\scripts\setup.ps1
 .\scripts\start.ps1
 ```
 
-On Linux:
+### Linux
 
 ```sh
 python3 -m venv .venv
@@ -27,42 +60,57 @@ cd ..
 .venv/bin/python scripts/run.py
 ```
 
-Open **http://127.0.0.1:8520**. No API key or configuration file is required. The first launch creates four independent examples:
+Open **http://127.0.0.1:8520**.
+
+The local reference edition starts with four independent synthetic cases:
 
 | Company | Scenario |
 | --- | --- |
-| Σταφυλάκης Οινοποιητική Α.Ε. | Completed preparation and a saved bulletin |
-| Attention Is All You Need Α.Ε. | Missing registry number and pending financial review |
-| Ypnos Palace Ξενοδοχειακή Α.Ε. | A 300,000 EUR borrowing discrepancy |
-| Aegean Foods | An unreadable requested amount and two discrepancies |
+| Σταφυλάκης Οινοποιητική Α.Ε. | Completed preparation and saved bulletin |
+| Attention Is All You Need Α.Ε. | Missing registry number and pending review |
+| Ypnos Palace Ξενοδοχειακή Α.Ε. | EUR 300,000 borrowing discrepancy |
+| Aegean Foods | Unreadable requested amount plus turnover and borrowing discrepancies |
 
-Select a field, inspect its highlighted PDF source, confirm or correct it, resolve comparisons, ask a ready-made question and save a preparation bulletin. Corrections without a supporting PDF source are saved but remain incomplete. Local changes are stored in `data/` and survive restarting the application. Stop with Ctrl+C. To try a separate workspace, run `python scripts/run.py --data-dir data-second` using the virtual environment.
+Local review changes are stored under `data/` and survive restarts. To use a separate workspace:
 
-The default mode uses recorded extraction results and local answers; it makes no AI calls. New PDF analysis and free-form AI questions require the optional live mode.
+```sh
+python scripts/run.py --data-dir data-second
+```
 
 ## Optional live AI
 
-Use your own OpenRouter account:
+The default local experience can use recorded demo analysis for repeatable review flows. New PDF analysis and free-form AI questions require live mode.
+
+### Windows
 
 ```powershell
 .\scripts\start.ps1 -Live
 ```
 
-On Linux, run `.venv/bin/python scripts/run.py --live`. Enter your key at the hidden prompt. It stays in the running process and is not saved to a file. The default model is `google/gemini-2.5-flash`. Analysis and free-form questions send document excerpts to OpenRouter and consume your account quota. Use synthetic documents only.
+### Linux
 
-## Design
+```sh
+.venv/bin/python scripts/run.py --live
+```
+
+Enter an OpenRouter key at the hidden prompt. The key remains in the running process and is not written to a configuration file. The default model is `google/gemini-2.5-flash`.
+
+Use synthetic documents only.
+
+## Architecture
 
 | Component | Responsibility |
 | --- | --- |
-| React, TypeScript, PDF.js | Review interface and highlighted PDF evidence |
-| FastAPI | Local API, background analysis and write commands |
-| Extraction and validation | Structured model proposals, source checks and number normalization |
-| Python/Decimal comparisons | Identity, currency, turnover, borrowing and accounting checks |
-| Review store | Immutable original extraction with separate analyst decisions |
-| Case-scoped Q&A | Retrieved PDF evidence and deterministic workflow answers |
-| Bulletin renderer | Greek PDF previews and immutable saved versions |
+| React, TypeScript, PDF.js | Analyst workspace and highlighted PDF evidence |
+| FastAPI | Local API, analysis jobs and write operations |
+| Extraction and validation | Structured proposals, source checks and number normalization |
+| Python / Decimal checks | Deterministic comparisons for identity, currency, turnover, borrowing and accounting logic |
+| Review store | Original extraction plus separate analyst decisions and history |
+| Case assistant | Case-scoped questions and workflow-aware answers |
+| Bulletin renderer | Preview and immutable saved preparation-bulletin versions |
+| Clarification export | Editable Word draft for missing or inconsistent information |
 
-Writes use request identifiers and workspace fingerprints. Relevant data changes reopen affected comparisons; confirming an unchanged value preserves its resolution. Document replacement preserves old PDF versions and requires reanalysis. The runner binds to loopback and permits one writer per data directory.
+The implementation keeps source documents, original extraction, analyst review events and saved versions separate. Relevant data changes can reopen affected comparisons, and replacing a PDF requires reanalysis before new review decisions use that document.
 
 ## Tests
 
@@ -76,8 +124,19 @@ npm run build
 npx playwright test
 ```
 
-Browser tests start their own isolated fixture server and use Chromium. Install it once with `npx playwright install chromium`. Tests cover source navigation, corrections and reloads, comparison resolutions, bulletin versions, numeric integrity, stale writes and document replacement. Recorded examples and mocked providers make these repeatable workflow tests, not an AI accuracy benchmark.
+Browser tests use Chromium and isolated fixtures. The local test suite covers source navigation, corrections, reloads, comparison resolutions, bulletin versions, numeric integrity, stale writes and document replacement.
 
-## Scope
+These repository tests validate implementation behaviour. They are **not** a substitute for the separate product evaluation used in the assessment.
 
-The application supports preparation and analyst review; it does not make lending decisions. It handles 24 extracted fields, a fixed set of comparisons and text-based PDFs. Scanned documents need OCR outside this workflow. Citation validation verifies source identity and quote presence, not every assertion in a free-form model answer. The local application is intended for one operator, without multi-user authentication.
+## Scope and limitations
+
+- 24 defined extracted fields across the two supported document types.
+- Fixed deterministic comparison set rather than general credit analysis.
+- Text-based PDFs only; scanned documents require OCR outside this workflow.
+- Human review remains required for uncertain, inconsistent or customer-facing outputs.
+- The local reference edition is intended for one operator and does not represent production authentication, authorization, load or bank deployment controls.
+- The clarification draft is editable and must be reviewed before sending; no email is sent automatically.
+
+## Submission note
+
+The final assessment document and video describe the complete product story, including the newer hosted assistant iteration and its targeted follow-up validation. The original baseline evaluation remains a separate historical record of the earlier evaluated snapshot rather than being rewritten after later product changes.
